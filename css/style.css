@@ -1,0 +1,68 @@
+    body {
+        margin: 40px;
+    }
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        justify-content: center;
+        grid-template-columns: repeat(8, [col] 100px ) ;
+        grid-template-rows: repeat(3, [row] auto  );
+        grid-template-areas: 
+            "ip   ip   ip   ip   ip   ip   logo logo"
+            "menu menu menu menu menu menu menu menu"
+            "adds adds cont cont cont cont cont cont"; /* rgba cu transparenta */
+        background-color: #fff;
+        color: #444;
+    }
+
+@media only screen and (max-width: 980px) {  /* S6 edge 980px */
+    body {
+        margin: 10px;
+        }
+      .wrapper { 
+      grid-template-columns: repeat(4, [col] 1fr ) ;
+        grid-template-rows: repeat(4, [row] auto  );
+        grid-template-areas: 
+            "logo menu menu menu"
+            "ip   ip   ip   ip"
+            "cont cont cont cont"
+            "adds adds adds adds";
+        background-color: #fff;
+        color: #444;
+    } 
+}
+
+    .box {
+        background-color: #444;
+        color: #fff;
+        border: solid rgba(3, 0, 0, 0.5); /* rgba cu transparenta */
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 100%;
+
+    }
+
+        .menu {
+        grid-area: menu;
+        background-color: #139;
+}
+
+  .ip {
+        grid-area: ip;
+        background-color: #fda;
+    }
+    .logo {
+        grid-area: logo;
+        background-color: #800;
+    }
+    .adds {
+        grid-area: adds;
+        background-color: #006;
+    }
+    .cont {
+        grid-area: cont;
+        background-color: #aaf;
+    }
+
+
+
